@@ -4,26 +4,26 @@ import { useCookies } from "react-cookie";
 import { UserContext } from "../../context/UserContext";
 
 function ProtectedRoute({ children, requireSPSO = false }) {
-    const { user } = useContext(UserContext);
-    const [cookies] = useCookies();
-    const navigate = useNavigate();
+  const { user } = useContext(UserContext);
+  const [cookies] = useCookies();
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        // Check if user is not logged in
-        if (!cookies.auth) {
-            localStorage.clear();
-            navigate("/login");
-            return;
-        }
+  useEffect(() => {
+    // Check if user is not logged in
+    if (!cookies.auth) {
+      localStorage.clear();
+      navigate("/login");
+      return;
+    }
 
-        // Check if route requires SPSO access
-        if (requireSPSO && !user.isSPSO) {
-            navigate("/not-found");
-            return;
-        }
-    }, [cookies, user, navigate, requireSPSO]);
+    // Check if route requires SPSO access
+    if (requireSPSO && !user.isSPSO) {
+      navigate("/not-found");
+      return;
+    }
+  }, [cookies, user, navigate, requireSPSO]);
 
-    return children;
+  return children;
 }
 
 export default ProtectedRoute;

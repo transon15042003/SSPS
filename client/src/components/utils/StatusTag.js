@@ -1,32 +1,32 @@
 function StatusTag({ status }) {
   let bgColor, message;
   switch (status) {
-    case 'success':
-      bgColor = 'success';
-      message = 'In thành công';
+    case "success":
+      bgColor = "success";
+      message = "In thành công";
       break;
-    case 'failed':
-      bgColor = 'danger';
-      message = 'In thất bại';
+    case "failed":
+      bgColor = "danger";
+      message = "In thất bại";
       break;
-    case 'progress':
-      bgColor = 'warning';
-      message = 'Đang in';
+    case "progress":
+      bgColor = "warning";
+      message = "Đang in";
       break;
-    case 'pending':
-      bgColor = 'secondary';
-      message = 'Chưa in';
+    case "pending":
+      bgColor = "secondary";
+      message = "Chưa in";
       break;
     default:
-      bgColor = 'primary';
-      message = '';
+      bgColor = "primary";
+      message = "";
   }
-  
+
   return (
-    <span 
+    <span
       className={`badge rounded-pill text-bg-${bgColor}`}
       style={{
-        fontSize: '0.88rem'
+        fontSize: "0.88rem",
       }}
     >
       {message}

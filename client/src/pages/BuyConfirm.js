@@ -7,23 +7,23 @@ function BuyConfirm() {
   const { state } = useLocation();
   const [data, setData] = useState({
     amount: Number(state?.numPages ?? 0),
-    price: Number(state?.numPages ?? 0) * 500
+    price: Number(state?.numPages ?? 0) * 500,
   });
   const navigate = useNavigate();
   const [cookies, , removeCookie] = useCookies();
   const token = cookies.auth;
-  
+
   useEffect(() => {
     if (!state) {
-      navigate('/not-found');
+      navigate("/not-found");
     }
     if (state?.purchase_id) {
       axios
         .get(`${process.env.REACT_APP_SERVER_URL}/buy/${state.purchase_id}`, {
           headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}`
-          }
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
         })
         .then((response) => {
           console.log(response);
@@ -31,92 +31,104 @@ function BuyConfirm() {
         })
         .catch((error) => {
           if (error.response?.status === 401) {
-            removeCookie('auth', { path: '/' });
+            removeCookie("auth", { path: "/" });
             localStorage.clear();
-            window.location.assign('/');
+            window.location.assign("/");
           }
         });
     }
-  }, []);
-  
+  }, [navigate, state, token, removeCookie]);
+
   const handleUnpaid = (e) => {
     if (state.purchase_id) {
-      navigate('/buy');
+      navigate("/buy");
     } else {
       axios
-        .put(`${process.env.REACT_APP_SERVER_URL}/buy`, {
-          amount: data.amount,
-          price: data.price,
-          status: 'unpaid'
-        }, {
-          headers: {
-            Authorization: `Bearer ${token}`
+        .put(
+          `${process.env.REACT_APP_SERVER_URL}/buy`,
+          {
+            amount: data.amount,
+            price: data.price,
+            status: "unpaid",
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
           }
-        })
+        )
         .then((response) => {
           console.log(response.data);
           setTimeout(() => {
-            navigate('/buy');
+            navigate("/buy");
           }, 200);
         })
         .catch((error) => {
-          console.log('Mua trang không thành công: ', error);
+          console.log("Mua trang không thành công: ", error);
           setTimeout(() => {
-            navigate('/buy');
+            navigate("/buy");
           }, 200);
         });
     }
-  }
-  
+  };
+
   const handlePaid = (e) => {
     if (state.purchase_id) {
       axios
-        .post(`${process.env.REACT_APP_SERVER_URL}/buy/${state.purchase_id}`, {
-          amount: data.amount,
-          status: 'paid'
-        }, {
-          headers: {
-            Authorization: `Bearer ${token}`
+        .post(
+          `${process.env.REACT_APP_SERVER_URL}/buy/${state.purchase_id}`,
+          {
+            amount: data.amount,
+            status: "paid",
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
           }
-        })
+        )
         .then((response) => {
           console.log(response.data);
           setTimeout(() => {
-            navigate('/buy');
+            navigate("/buy");
           }, 200);
         })
         .catch((error) => {
           console.error(error);
           setTimeout(() => {
-            navigate('/buy');
+            navigate("/buy");
           }, 200);
-        })
+        });
     } else {
       axios
-        .put(`${process.env.REACT_APP_SERVER_URL}/buy`, {
-          amount: data.amount,
-          price: data.price,
-          status: 'paid'
-        }, {
-          headers: {
-            Authorization: `Bearer ${token}`
+        .put(
+          `${process.env.REACT_APP_SERVER_URL}/buy`,
+          {
+            amount: data.amount,
+            price: data.price,
+            status: "paid",
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
           }
-        })
+        )
         .then((response) => {
           console.log(response.data);
           setTimeout(() => {
-            navigate('/buy');
+            navigate("/buy");
           }, 200);
         })
         .catch((error) => {
           console.error(error);
           setTimeout(() => {
-            navigate('/buy');
+            navigate("/buy");
           }, 200);
         });
     }
-  }
-  
+  };
+
   return (
     <div className="container-md mt-3">
       <div className="row justify-content-center">
@@ -140,11 +152,7 @@ function BuyConfirm() {
           </table>
         </div>
         <div className="col-12 text-center mb-3">
-          <Link
-            to='/buy'
-            role="button"
-            className="btn btn-secondary mx-3"
-          >
+          <Link to="/buy" role="button" className="btn btn-secondary mx-3">
             Hủy
           </Link>
           <button

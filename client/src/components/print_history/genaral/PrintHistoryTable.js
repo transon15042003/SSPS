@@ -5,7 +5,7 @@ import RowRecord from "./RowRecord";
 function PrintHistoryTable({ dataRows }) {
   const { user } = useContext(UserContext);
   return (
-    <table className="table table-hover" id='history-table'>
+    <table className="table table-hover" id="history-table">
       <thead>
         <tr className="align-middle">
           <th scope="col">ID</th>
@@ -19,9 +19,9 @@ function PrintHistoryTable({ dataRows }) {
         </tr>
       </thead>
       <tbody>
-        {dataRows.map((data, index) =>
-        <RowRecord key={index} data={data} />
-        )}
+        {dataRows.map((data, index) => (
+          <RowRecord key={index} data={data} />
+        ))}
       </tbody>
     </table>
   );

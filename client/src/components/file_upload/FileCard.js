@@ -1,8 +1,8 @@
-import { IoDocumentTextOutline, IoPrintOutline } from "react-icons/io5";
-import { FaRegFile, FaRegFilePdf } from "react-icons/fa6";
-import { BsFiletypePptx } from "react-icons/bs";
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { BsFiletypePptx } from "react-icons/bs";
+import { FaRegFile, FaRegFilePdf } from "react-icons/fa6";
+import { IoDocumentTextOutline, IoPrintOutline } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 import Paging from "./Paging";
 
 function FileCards({ files, items_per_page = 3 }) {

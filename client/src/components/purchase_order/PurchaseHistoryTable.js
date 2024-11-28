@@ -2,7 +2,7 @@ import RowRecord from "./RowRecord";
 
 function PurchaseHistoryTable({ dataRows }) {
   return (
-    <table className="table table-hover" id='purchase-table'>
+    <table className="table table-hover" id="purchase-table">
       <thead>
         <tr className="align-middle">
           <th scope="col">ID</th>
@@ -14,9 +14,9 @@ function PurchaseHistoryTable({ dataRows }) {
         </tr>
       </thead>
       <tbody>
-        {dataRows.map((data, index) =>
-        <RowRecord key={index} data={data} />
-        )}
+        {dataRows.map((data, index) => (
+          <RowRecord key={index} data={data} />
+        ))}
       </tbody>
     </table>
   );
