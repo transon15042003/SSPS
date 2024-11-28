@@ -98,18 +98,18 @@ CREATE TABLE purchase_order (
 -- Insert data for the customer table
 INSERT INTO customer (customer_id, name, password, type, email, balance, last_used)
 VALUES
-(1111111, 'Mai Đức T', '$2a$10$kfi60Lqg5/b2PrsTpJ9SMOrufr15jBz/GR0MusAJq9kkF/L/y4arO', 'lecturer', 't.mai@hcmut.edu.vn', 100, '2024-11-29 17:55:00'),
-(2222222, 'Bùi Công T', '$2a$10$ZnsU72UpL59PL1H.tTZgWe.I7k.H6HxiK8llMa5A8W2hzsWIRZHLq', 'lecturer', 't.bui@hcmut.edu.vn', 100, '2024-11-29 14:19:03'),
-(3333333, 'Tran Hoang S', '$2a$10$BlyLtCjYJ31eZAkwE0GPsOYHvrlDlJwQCspM7L8VQhk3jMxvjCb/C', 'lecturer', 'son.tran@hcmut.edu.vn', 100, '2024-11-29 14:17:15'),
-(2112111, 'Nguyen Anh L', '$2a$10$OxERhZZDNwnJasuiO3FR7.EGvF8Pzu7u4XaVmrXdXPpNE6XLBKGAK', 'student', 'john.doe@hcmut.edu.vn', 50, '2024-11-19 10:21:17'),
-(2112222, 'Lê Văn A', '$2a$10$O3KgX9QJzZwaFBzr6sIBpuTmQ0O.2kfvgRqDVPjFGS7C1DMO.NjWm', 'student', 'a.le@hcmut.edu.vn', 70, '2024-11-19 10:23:40'),
-(2112333, 'Trần Đức B', '$2a$10$m.SEHw6fim5c7r0FH8UXDupIZ9hDxlKTXE.q7J6.hVt3brpId4Ygm', 'student', 'b.tran@hcmut.edu.vn', 60, '2024-11-19 10:23:40'),
-(2112444, 'Hoang Hong N', '$2a$10$O0zXaNpGPoSxiBLew.47E.FADa/GAPCGn9JBYEUhOliY3alLXTMoC', 'student', 'nam.hoang@hcmut.edu.vn', 100, '2024-11-29 18:49:21');
+(1111111, 'Mai Đức T', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', 'lecturer', 't.mai@hcmut.edu.vn', 100, '2024-11-29 17:55:00'),
+(2222222, 'Bùi Công T', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', 'lecturer', 't.bui@hcmut.edu.vn', 100, '2024-11-29 14:19:03'),
+(3333333, 'Tran Hoang S', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', 'lecturer', 'son.tran@hcmut.edu.vn', 100, '2024-11-29 14:17:15'),
+(2112111, 'Nguyen Anh L', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', 'student', 'john.doe@hcmut.edu.vn', 50, '2024-11-19 10:21:17'),
+(2112222, 'Lê Văn A', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', 'student', 'a.le@hcmut.edu.vn', 70, '2024-11-19 10:23:40'),
+(2112333, 'Trần Đức B', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', 'student', 'b.tran@hcmut.edu.vn', 60, '2024-11-19 10:23:40'),
+(2112444, 'Hoang Hong N', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', 'student', 'nam.hoang@hcmut.edu.vn', 100, '2024-11-29 18:49:21');
 
 -- Insert data for the SPSO table
 INSERT INTO spso (spso_id, name, username, password, dob, email, phone, last_used)
 VALUES
-(1, 'Tran Hoang S', 'admints', '$2a$10$/5QDldKgWy.NxkwpXAmCquVgi9WlFbNsq3dVKWgkClh5DSNq4ItAm', '2003-01-01', 'son.tran@hcmut.edu.vn', 123456789, '2024-11-29 18:47:31'),
+(1, 'Tran Hoang S', 'admints', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', '2003-01-01', 'son.tran@hcmut.edu.vn', 123456789, '2024-11-29 18:47:31'),
 (2, 'Nguyen Anh L', 'adminal', '$2a$10$Fi7DXEiZyD9YhDUYHrwNb.skX2fXPrtZKTrnTXeHTvb8s9KKTQfBu', '2003-01-01', 'linh.anh@hcmut.edu.vn', 123456789, '2024-11-26 00:00:00');
 
 -- Insert data for the printer table
