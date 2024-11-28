@@ -26,18 +26,18 @@ To use the application, you can follow the following steps:
 
 ### Install dependencies
 
-First, if you haven't installed [NodeJS](https://nodejs.org/), please visit https://nodejs.org/ and download it.
+First, if you haven't installed [NodeJS](https://nodejs.org/), please visit <https://nodejs.org/> and download it.
 
 Next, you will have to install all the dependencies of our project. Let's go to the "server" directory first and enter these commands:
 
-```
+```bash
   cd server
   npm install
 ```
 
 Then, go to the "client" directory and do the same thing by entering these commands:
 
-```
+```bash
   cd client
   npm install
 ```
@@ -60,19 +60,19 @@ There are two ways to start the application.
 
 Start two terminal instances in the **CNPM_HCMUT_SSPS** directory. For the first instance, run these commands:
 
-```
+```bash
   cd server
   npm start
 ```
 
 For the second one, run these commands:
 
-```
+```bash
   cd client
   npm start
 ```
 
-The application should be starting. The ReactJS application will run on http://localhost:3000 and the Express application will run on http://localhost:8080.
+The application should be starting. The ReactJS application will run on [http://localhost:3000](http://localhost:3000) and the Express application will run on [http://localhost:8080](http://localhost:8080).
 
 To log in as a student:
 
@@ -92,7 +92,7 @@ Run `npm install` in the root folder (do this for the first time only), this wil
 
 Now, to start the project in dev mode, run this command in root folder:
 
-```
+```bash
   npm run dev
 ```
 
