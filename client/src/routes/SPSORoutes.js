@@ -11,14 +11,12 @@ function SPSORoutes() {
   return (
     <Routes>
       <Route path="printer">
-        {" "}
         {/* Route quan ly may in */}
         <Route index element={<PrinterManagement />} />{" "}
         {/* Route trang tong hop */}
         <Route path="add" element={<h1>ghi</h1>} />
       </Route>
       <Route path="printlog">
-        {" "}
         {/* Route xem lich su in cua nguoi dung */}
         <Route index element={<PrintHistory />} />
         <Route path=":id" element={<PrintHistoryDetail />} />
