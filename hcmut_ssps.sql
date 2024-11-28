@@ -98,27 +98,24 @@ CREATE TABLE purchase_order (
 -- Insert data for the customer table
 INSERT INTO customer (customer_id, name, password, type, email, balance, last_used)
 VALUES
-(1111111, 'Mai Đức T', '$2a$10$kfi60Lqg5/b2PrsTpJ9SMOrufr15jBz/GR0MusAJq9kkF/L/y4arO', 'lecturer', 't.mai@hcmut.edu.vn', 100, '2023-11-29 17:55:00'),
-(2222222, 'Bùi Công T', '$2a$10$ZnsU72UpL59PL1H.tTZgWe.I7k.H6HxiK8llMa5A8W2hzsWIRZHLq', 'lecturer', 't.bui@hcmut.edu.vn', 100, '2023-11-29 14:19:03'),
-(3333333, 'Lê Đình T', '$2a$10$BlyLtCjYJ31eZAkwE0GPsOYHvrlDlJwQCspM7L8VQhk3jMxvjCb/C', 'lecturer', 't.le@hcmut.edu.vn', 100, '2023-11-29 14:17:15'),
-(2112111, 'John Doe', '$2a$10$OxERhZZDNwnJasuiO3FR7.EGvF8Pzu7u4XaVmrXdXPpNE6XLBKGAK', 'student', 'john.doe@hcmut.edu.vn', 50, '2023-11-19 10:21:17'),
-(2112222, 'Lê Văn A', '$2a$10$O3KgX9QJzZwaFBzr6sIBpuTmQ0O.2kfvgRqDVPjFGS7C1DMO.NjWm', 'student', 'a.le@hcmut.edu.vn', 10, '2023-11-19 10:23:40'),
-(2112333, 'Trần Đức B', '$2a$10$m.SEHw6fim5c7r0FH8UXDupIZ9hDxlKTXE.q7J6.hVt3brpId4Ygm', 'student', 'b.tran@hcmut.edu.vn', 6, '2023-11-19 10:23:40'),
-(2112444, 'Nguyễn Quốc Thắng', '$2a$10$O0zXaNpGPoSxiBLew.47E.FADa/GAPCGn9JBYEUhOliY3alLXTMoC', 'student', 'thang.nguyen@hcmut.edu.vn', 100, '2023-11-29 18:49:21');
+(1111111, 'Mai Đức T', '$2a$10$kfi60Lqg5/b2PrsTpJ9SMOrufr15jBz/GR0MusAJq9kkF/L/y4arO', 'lecturer', 't.mai@hcmut.edu.vn', 100, '2024-11-29 17:55:00'),
+(2222222, 'Bùi Công T', '$2a$10$ZnsU72UpL59PL1H.tTZgWe.I7k.H6HxiK8llMa5A8W2hzsWIRZHLq', 'lecturer', 't.bui@hcmut.edu.vn', 100, '2024-11-29 14:19:03'),
+(3333333, 'Tran Hoang S', '$2a$10$BlyLtCjYJ31eZAkwE0GPsOYHvrlDlJwQCspM7L8VQhk3jMxvjCb/C', 'lecturer', 'son.tran@hcmut.edu.vn', 100, '2024-11-29 14:17:15'),
+(2112111, 'Nguyen Anh L', '$2a$10$OxERhZZDNwnJasuiO3FR7.EGvF8Pzu7u4XaVmrXdXPpNE6XLBKGAK', 'student', 'john.doe@hcmut.edu.vn', 50, '2024-11-19 10:21:17'),
+(2112222, 'Lê Văn A', '$2a$10$O3KgX9QJzZwaFBzr6sIBpuTmQ0O.2kfvgRqDVPjFGS7C1DMO.NjWm', 'student', 'a.le@hcmut.edu.vn', 70, '2024-11-19 10:23:40'),
+(2112333, 'Trần Đức B', '$2a$10$m.SEHw6fim5c7r0FH8UXDupIZ9hDxlKTXE.q7J6.hVt3brpId4Ygm', 'student', 'b.tran@hcmut.edu.vn', 60, '2024-11-19 10:23:40'),
+(2112444, 'Hoang Hong N', '$2a$10$O0zXaNpGPoSxiBLew.47E.FADa/GAPCGn9JBYEUhOliY3alLXTMoC', 'student', 'nam.hoang@hcmut.edu.vn', 100, '2024-11-29 18:49:21');
 
 -- Insert data for the SPSO table
 INSERT INTO spso (spso_id, name, username, password, dob, email, phone, last_used)
 VALUES
-(1, 'Huỳnh Nguyên Phúc', 'adminph', '$2a$10$/5QDldKgWy.NxkwpXAmCquVgi9WlFbNsq3dVKWgkClh5DSNq4ItAm', '2000-01-01', 'p.huynh@hcmut.edu.vn', 123456789, '2023-11-29 18:47:31'),
-(2, 'Trần Bảo Phúc', 'adminpt', '$2a$10$Fi7DXEiZyD9YhDUYHrwNb.skX2fXPrtZKTrnTXeHTvb8s9KKTQfBu', '2000-01-01', 'p.tran@hcmut.edu.vn', 123456789, '2023-11-26 00:00:00'),
-(3, 'Dương Phúc Thắng', 'admintd', '$2a$10$OHJiPUO0QUnIuDA6xWJBkOFt1cylOOowdOkp7PkjK1Ed8.aFs/r9y', '2000-01-01', 't.duong@hcmut.edu.vn', 123456789, '2023-11-26 00:00:00'),
-(4, 'Cao Minh Quân', 'adminqc', '$2a$10$vcQRRMYm4gR6mFLL.8V1ZOyrNuA34MRkxEZPWpq5hCdeKSkvWwSqq', '2000-01-01', 'q.cao@hcmut.edu.vn', 123456789, '2023-11-29 18:49:25'),
-(5, 'Nguyễn Tiến Phát', 'adminpn', '$2a$10$5zoeSehUPPk9dS42Ujr1sOG.IZJKQQasG6K9hmsaEQDM6ukh83wP6', '2000-01-01', 'p.nguyen@hcmut.edu.vn', 123456789, '2023-11-29 14:27:45');
+(1, 'Tran Hoang S', 'admints', '$2a$10$/5QDldKgWy.NxkwpXAmCquVgi9WlFbNsq3dVKWgkClh5DSNq4ItAm', '2003-01-01', 'son.tran@hcmut.edu.vn', 123456789, '2024-11-29 18:47:31'),
+(2, 'Nguyen Anh L', 'adminal', '$2a$10$Fi7DXEiZyD9YhDUYHrwNb.skX2fXPrtZKTrnTXeHTvb8s9KKTQfBu', '2003-01-01', 'linh.anh@hcmut.edu.vn', 123456789, '2024-11-26 00:00:00');
 
 -- Insert data for the printer table
 INSERT INTO printer (printer_id, name, brand, model, description, loc_campus, loc_building, loc_room, status)
 VALUES
-(1, 'Máy in 1', 'HP', 'HP OfficeJet 8015e', 'Máy in HP OfficeJet 8015 có khả năng in, sao chép, quét và gửi fax một cách hiệu quả. Nó cũng hỗ trợ các tính năng đáng tin cậy như in hai mặt tự động và in từ xa thông qua kết nối Wi-Fi và Bluetooth. Với mẫu mã đẹp và kiểu dáng nhỏ gọn, nó làm cho việc giải quyết các nhu cầu văn phòng dễ dàng hơn.', '1', 'B1', '101', 'running'),
+(1, 'Máy in 1', 'HP', 'HP OfficeJet 8015e', 'Máy in HP OfficeJet 8015 in, sao chép, quét và gửi fax một cách hiệu quả. Nó cũng hỗ trợ các tính năng đáng tin cậy như in hai mặt tự động và in từ xa thông qua kết nối Wi-Fi và Bluetooth. Với mẫu mã đẹp và kiểu dáng nhỏ gọn, nó làm cho việc giải quyết các nhu cầu văn phòng dễ dàng hơn.', '1', 'B1', '101', 'running'),
 (2, 'Máy in 2', 'HP', 'HP LaserJet MFP 135a (4ZB82A)', 'Máy in HP Laser Trắng đen đa năng In scan copy LaserJet 135a (4ZB82A) thiết kế các mặt tinh xảo, vỏ phủ màu trắng - đen trang nhã, kiểu dáng gọn gàng, tô điểm cho không gian làm việc, sinh hoạt của bạn cao cấp, hiện đại hơn.', '1', 'B1', '105', 'running'),
 (3, 'Máy in 3', 'Canon', 'Canon PIXMA GM2070 Wifi', 'Máy in phun đơn năng Canon PIXMA GM2070 sở hữu nét thiết kế hiện đại, vẻ ngoài sang trọng cùng các tính năng in ấn tân tiến, phù hợp để sử dụng trong văn phòng, trường học cũng như các hộ gia đình. Thiết kế hiện đại, đặt thăng bằng trên mọi mặt bàn, tủ. Hiệu suất in cao với tốc độ ổn định.', '1', 'B2', '111', 'running'),
 (4, 'Máy in 4', 'Brother', 'Brother DCP-T720DW Wifi', 'Máy in phun màu đa năng In-Scan-Copy Brother DCP-T720DW được cài đặt các chức năng in 2 mặt, in wifi, copy và scan. Hơn nữa, là máy in phun màu, ngoài khả năng in đen trắng, máy còn có thể tạo nên những bản in màu tươi tắn. Phục vụ tốt cho nhu cầu in ấn trong gia đình, công ty quy mô nhỏ với tốc độ in ảnh 17 ảnh/phút (đen trắng), 16.5 ảnh/phút (màu), in trang 30 trang/phút (đen trắng), 26 trang/phút (màu). Công suất in đến 2.500 trang/tháng, in màu xuất trang đầu tiên trong 9.5 giây, in đen trắng chỉ trong 6 giây, giúp rút ngắn thời gian xử lý công việc.', '1', 'A2', '102', 'running'),
@@ -131,7 +128,7 @@ VALUES
 
 -- Insert data for the document table
 INSERT INTO document (document_id, name, file_type, no_of_pages, user_id, printer_id) VALUES
-(1, 'Internship Report 2023', 'pdf', 16, 2222222, 3),
+(1, 'Internship Report 2024', 'pdf', 16, 2222222, 3),
 (2, 'C++ Programming Teaching Plan', 'pdf', 10, 2112222, 1),
 (3, 'Occupational Safety Regulations', 'doc', 5, 2112333, 2),
 (4, 'AI Technology Advancements Research Project', 'xls', 20, 2112444, 4),
@@ -151,29 +148,29 @@ INSERT INTO print_order (print_id, side, page_size, orientation, pages_per_sheet
 (1, '1', 'A4', 'portrait', 1, 1.00, '2022-10-01 10:00:00', '2022-10-01 10:00:00', 'progress', '8-15', 8, 3, 2112333),
 (2, '1', 'A4', 'portrait', 1, 1.00, '2022-11-01 17:30:00', '2022-11-01 18:30:00', 'success', '5-15', 11, 9, 2112333),
 (3, '1', 'A4', 'portrait', 1, 0.90, '2022-12-01 08:00:00', '2022-12-01 08:30:00', 'success', '5-10', 6, 1, 2222222),
-(4, '1', 'A4', 'portrait', 1, 0.50, '2023-03-01 14:00:00', '2023-03-01 15:00:00', 'failed', '3-7', 0, 6, 2222222),
-(5, '2', 'A3', 'landscape', 2, 1.50, '2023-05-01 18:00:00', '2023-05-01 19:30:00', 'failed', 'All', 0, 10, 2112444),
-(6, '1', 'A4', 'portrait', 1, 1.00, '2023-05-01 15:30:00', '2023-05-01 15:30:00', 'progress', '10-20', 11, 7, 2112111),
-(7, '1', 'A4', 'portrait', 1, 0.60, '2023-07-01 11:30:00', '2023-07-01 12:30:00', 'pending', 'All', 20, 4, 2112444),
-(8, '2', 'A3', 'landscape', 2, 0.78, '2023-12-01 16:00:00', '2023-12-01 17:30:00', 'pending', 'All', 3, 8, 2112222),
-(9, '2', 'A3', 'landscape', 2, 0.85, '2023-12-01 13:00:00', '2023-12-01 14:30:00', 'success', '1-6', 2, 5, 2112111),
-(10, '2', 'A3', 'landscape', 2, 0.90, '2023-12-01 09:00:00', '2023-12-01 10:30:00', 'failed', '1-3', 0, 2, 2112222),
-(11, '2', 'A4', 'portrait', 2, 0.90, '2023-01-01 09:00:00', '2023-01-01 10:30:00', 'success', 'All', 2, 11, 2112444),
-(12, '2', 'A4', 'portrait', 2, 1.00, '2023-02-01 09:00:00', '2023-02-01 10:30:00', 'success', '1-20', 5, 12, 2112444),
-(13, '2', 'A4', 'landscape', 2, 1.00, '2023-03-01 08:00:00', '2023-03-01 08:00:00', 'progress', 'All', 8, 13, 2112444),
-(14, '2', 'A4', 'portrait', 2, 1.20, '2023-02-01 09:00:00', '2023-02-01 10:30:00', 'success', 'All', 3, 14, 2112444);
+(4, '1', 'A4', 'portrait', 1, 0.50, '2024-03-01 14:00:00', '2024-03-01 15:00:00', 'failed', '3-7', 0, 6, 2222222),
+(5, '2', 'A3', 'landscape', 2, 1.50, '2024-05-01 18:00:00', '2024-05-01 19:30:00', 'failed', 'All', 0, 10, 2112444),
+(6, '1', 'A4', 'portrait', 1, 1.00, '2024-05-01 15:30:00', '2024-05-01 15:30:00', 'progress', '10-20', 11, 7, 2112111),
+(7, '1', 'A4', 'portrait', 1, 0.60, '2024-07-01 11:30:00', '2024-07-01 12:30:00', 'pending', 'All', 20, 4, 2112444),
+(8, '2', 'A3', 'landscape', 2, 0.78, '2024-12-01 16:00:00', '2024-12-01 17:30:00', 'pending', 'All', 3, 8, 2112222),
+(9, '2', 'A3', 'landscape', 2, 0.85, '2024-12-01 13:00:00', '2024-12-01 14:30:00', 'success', '1-6', 2, 5, 2112111),
+(10, '2', 'A3', 'landscape', 2, 0.90, '2024-12-01 09:00:00', '2024-12-01 10:30:00', 'failed', '1-3', 0, 2, 2112222),
+(11, '2', 'A4', 'portrait', 2, 0.90, '2024-01-01 09:00:00', '2024-01-01 10:30:00', 'success', 'All', 2, 11, 2112444),
+(12, '2', 'A4', 'portrait', 2, 1.00, '2024-02-01 09:00:00', '2024-02-01 10:30:00', 'success', '1-20', 5, 12, 2112444),
+(13, '2', 'A4', 'landscape', 2, 1.00, '2024-03-01 08:00:00', '2024-03-01 08:00:00', 'progress', 'All', 8, 13, 2112444),
+(14, '2', 'A4', 'portrait', 2, 1.20, '2024-02-01 09:00:00', '2024-02-01 10:30:00', 'success', 'All', 3, 14, 2112444);
 
 -- Insert data for the Purchase order table
 INSERT INTO purchase_order (purchase_id, time, amount, price, status, user_id) VALUES
-(1, '2023-11-01 08:00:00', 50, 25000, 'unpaid', 2112222),
-(2, '2023-11-01 09:00:00', 3, 1500, 'paid', 2112333),
-(3, '2023-11-01 10:00:00', 80, 40000, 'paid', 2112444),
-(4, '2023-11-01 11:00:00', 26, 13000, 'paid', 2112111),
-(5, '2023-12-01 12:00:00', 6, 3000, 'unpaid', 2222222),
-(6, '2023-12-01 13:00:00', 14, 7000, 'paid', 2112111),
-(7, '2023-12-01 14:00:00', 7, 3500, 'unpaid', 2112222),
-(8, '2023-12-01 15:00:00', 100, 50000, 'paid', 2112333),
-(9, '2023-12-01 16:00:00', 90, 45000, 'paid', 2112444),
-(10, '2023-12-01 17:00:00', 50, 25000, 'paid', 2222222),
-(11, '2023-12-01 10:00:00', 80, 40000, 'unpaid', 2112444),
-(12, '2023-12-01 10:00:00', 20, 10000, 'unpaid', 2112444);
+(1, '2024-11-01 08:00:00', 50, 25000, 'unpaid', 2112222),
+(2, '2024-11-01 09:00:00', 3, 1500, 'paid', 2112333),
+(3, '2024-11-01 10:00:00', 80, 40000, 'paid', 2112444),
+(4, '2024-11-01 11:00:00', 26, 13000, 'paid', 2112111),
+(5, '2024-12-01 12:00:00', 6, 3000, 'unpaid', 2222222),
+(6, '2024-12-01 13:00:00', 14, 7000, 'paid', 2112111),
+(7, '2024-12-01 14:00:00', 7, 3500, 'unpaid', 2112222),
+(8, '2024-12-01 15:00:00', 100, 50000, 'paid', 2112333),
+(9, '2024-12-01 16:00:00', 90, 45000, 'paid', 2112444),
+(10, '2024-12-01 17:00:00', 50, 25000, 'paid', 2222222),
+(11, '2024-12-01 10:00:00', 80, 40000, 'unpaid', 2112444),
+(12, '2024-12-01 10:00:00', 20, 10000, 'unpaid', 2112444);
