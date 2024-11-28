@@ -110,7 +110,7 @@ VALUES
 INSERT INTO spso (spso_id, name, username, password, dob, email, phone, last_used)
 VALUES
 (1, 'Tran Hoang S', 'admints', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', '2003-01-01', 'son.tran@hcmut.edu.vn', 123456789, '2024-11-29 18:47:31'),
-(2, 'Nguyen Anh L', 'adminal', '$2a$10$Fi7DXEiZyD9YhDUYHrwNb.skX2fXPrtZKTrnTXeHTvb8s9KKTQfBu', '2003-01-01', 'linh.anh@hcmut.edu.vn', 123456789, '2024-11-26 00:00:00');
+(2, 'Nguyen Anh L', 'adminal', '$2a$10$EFDuMAwdOEcnkU2mV7HBi.7cDB124e4MmrX4jROcqoPrPU2OmFjpK', '2003-01-01', 'linh.anh@hcmut.edu.vn', 123456789, '2024-11-26 00:00:00');
 
 -- Insert data for the printer table
 INSERT INTO printer (printer_id, name, brand, model, description, loc_campus, loc_building, loc_room, status)
