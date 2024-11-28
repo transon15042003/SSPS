@@ -10,13 +10,13 @@ The system is managed by the Student Printing Service Officer (SPSO). They are r
 
 ## Technology Stack
 
--   Front-end: ReactJS, Bootstrap, and other additional libraries provided by npm.
--   Back-end: NodeJS (v20), ExpressJS.
--   Database: MySQL.
+- Front-end: ReactJS, Bootstrap, and other additional libraries provided by npm.
+- Back-end: NodeJS (v20), ExpressJS.
+- Database: MySQL.
 
 ## Drawbacks
 
--   Payment methods not integrated
+- Payment methods not integrated
 
 ## Installation
 
@@ -76,13 +76,13 @@ The application should be starting. The ReactJS application will run on http://l
 
 To log in as a student:
 
--   Email: `john.doe@hcmut.edu.vn`
--   Password: `123456`
+- Email: `john.doe@hcmut.edu.vn`
+- Password: `Linh15042003`
 
 To log in as an admin:
 
--   Username: `adminqc`
--   Password: `23571113`
+- Username: `admints`
+- Password: `Linh15042003`
 
 You are now ready to explore our application!
 
