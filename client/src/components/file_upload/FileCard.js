@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { BsFiletypePptx } from "react-icons/bs";
 import { FaRegFile, FaRegFilePdf } from "react-icons/fa6";
 import { IoDocumentTextOutline, IoPrintOutline } from "react-icons/io5";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Paging from "./Paging";
 
 function FileCards({ files, items_per_page = 3 }) {
@@ -22,86 +22,87 @@ function FileCards({ files, items_per_page = 3 }) {
     if (totalPages <= 3) {
         startPage = 1;
         endPage = totalPages;
-    } 
-    else {
+    } else {
         startPage = Math.max(1, currentPage - 1);
         endPage = Math.min(totalPages, currentPage + 1);
     }
 
     const style = {
-        height: '1.4em', 
-        width: '1.4em'
-    }
+        height: "1.4em",
+        width: "1.4em",
+    };
 
     const handleFileIcon = (name) => {
         let index = name.length - 1;
-        while (index >= 0 && name[index] !== '.') index--;
+        while (index >= 0 && name[index] !== ".") index--;
         const type = name.slice(index + 1);
         switch (type) {
-            case 'doc':
-            case 'docx':
+            case "doc":
+            case "docx":
                 return <IoDocumentTextOutline style={style} />;
-            case 'pdf':
+            case "pdf":
                 return <FaRegFilePdf style={style} />;
-            case 'ppt':
-            case 'pptx':
+            case "ppt":
+            case "pptx":
                 return <BsFiletypePptx style={style} />;
             default:
-                return <FaRegFile style={style} />
+                return <FaRegFile style={style} />;
         }
     };
-    
 
     return (
         <>
-        <ul className="list-group rounded-0">
-            {currentFiles.map((file, key) => (
-                <li className="list-group-item mb-3 px-4" key={key}>
-                    <div className="d-flex row">
-                        <div className="col-1">
-                            {handleFileIcon(file)}
+            <ul className="list-group rounded-0">
+                {currentFiles.map((file, key) => (
+                    <li className="list-group-item mb-3 px-4" key={key}>
+                        <div className="d-flex row">
+                            <div className="col-1">{handleFileIcon(file)}</div>
+                            <div
+                                className="col-6 col-sm-8 col-md-9 col-lg-10 text-3 py-1"
+                                style={{
+                                    overflowWrap: "break-word",
+                                    whiteSpace: "pre-wrap",
+                                    overflow: "hidden",
+                                    textOverflow: "ellipsis",
+                                    lineHeight: "1.3em",
+                                    maxHeight: "3.0em",
+                                }}
+                            >
+                                {file} - 100%
+                            </div>
+                            <Link
+                                className="col-1"
+                                to="/print/config"
+                                state={{ name: file }}
+                            >
+                                <IoPrintOutline style={style} />
+                            </Link>
                         </div>
                         <div
-                            className="col-6 col-sm-8 col-md-9 col-lg-10 text-3 py-1"
-                            style={{
-                                overflowWrap: 'break-word',
-                                whiteSpace: 'pre-wrap',
-                                overflow: 'hidden',
-                                textOverflow: 'ellipsis',
-                                lineHeight: '1.3em',
-                                maxHeight: '3.0em'
-                            }}
+                            className="progress bg-dark mt-2"
+                            style={{ height: "2px" }}
                         >
-                            {file} - 100%
+                            <div
+                                className="progress-bar bg-success"
+                                aria-valuenow="100"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                style={{
+                                    width: "100%",
+                                }}
+                            ></div>
                         </div>
-                        <Link className="col-1" to='/print/config' state={{ name: file }}>
-                            <IoPrintOutline style={style}/>
-                        </Link>
-                        
-                    </div>
-                    <div className="progress bg-dark mt-2" style={{ height: '2px' }}>
-                        <div
-                            className="progress-bar bg-success"
-                            aria-valuenow="100"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                            style={{
-                                width: '100%'
-                            }}
-                        >
-                        </div>
-                    </div>
-                </li>
-            ))}
-        </ul>
-        <Paging 
-            startPage={startPage}
-            currentPage={currentPage}
-            endPage={endPage}
-            paginate={paginate}
-            indexOfLastItem={indexOfLastItem} 
-            length={totalItems}
-        />
+                    </li>
+                ))}
+            </ul>
+            <Paging
+                startPage={startPage}
+                currentPage={currentPage}
+                endPage={endPage}
+                paginate={paginate}
+                indexOfLastItem={indexOfLastItem}
+                length={totalItems}
+            />
         </>
     );
 }
