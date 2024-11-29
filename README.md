@@ -62,7 +62,7 @@ Start two terminal instances in the **CNPM_HCMUT_SSPS** directory. For the first
 
 ```bash
   cd server
-  npm start
+  npm run dev
 ```
 
 For the second one, run these commands:
@@ -85,16 +85,6 @@ To log in as an admin:
 -   Password: `2114672`
 
 You are now ready to explore our application!
-
-#### Start both folders concurrently in dev mode
-
-Run `npm install` in the root folder (do this for the first time only), this will install the [concurrently](https://www.npmjs.com/package/concurrently) package. Besides, [nodemon](https://www.npmjs.com/package/nodemon) has also been added to the _server_ before.
-
-Now, to start the project in dev mode, run this command in root folder:
-
-```bash
-  npm run dev
-```
 
 ## Contributor
 
