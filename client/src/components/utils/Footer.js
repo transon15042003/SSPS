@@ -8,51 +8,55 @@ import { FaLocationDot } from "react-icons/fa6";
 import { MdCall, MdEmail } from "react-icons/md";
 
 function Footer() {
-  // const { user } = useContext(UserContext);
-  // const [pageLinks, setPageLinks] = useState([]);
+    // const { user } = useContext(UserContext);
+    // const [pageLinks, setPageLinks] = useState([]);
 
-  // useEffect(() => {
-  //     if (user.isSPSO) {
-  //         setPageLinks(spsoLinks);
-  //     } else {
-  //         setPageLinks(customerLinks);
-  //     }
-  // }, [user]);
+    // useEffect(() => {
+    //     if (user.isSPSO) {
+    //         setPageLinks(spsoLinks);
+    //     } else {
+    //         setPageLinks(customerLinks);
+    //     }
+    // }, [user]);
 
-  return (
-    <footer className="bg-dark pt-2 text-white">
-      <div className="container mt-4 px-3 px-md-0">
-        <div className="row mt-3 justify-content-around">
-          <div className="col-3 col-md-4 col-lg-5 mb-3 text-center">
-            <h6 className="text-uppercase fw-bold mb-3">HCMUT - SSPS</h6>
-            <img
-              src={logo_BK_border}
-              alt="Logo Bách Khoa TPHCM"
-              width={80}
-              height={80}
-              draggable="false"
-              className="mx-auto d-block"
-            />
-          </div>
-          <div className="col-3 col-md-4 col-lg-5 mb-md-0 mb-3">
-            <h6 className="text-uppercase fw-bold mb-3">Liên hệ</h6>
-            <p>
-              <FaLocationDot /> 268 Lý Thường Kiệt, phường 14, quận 10, TP.HCM
-            </p>
-            <p>
-              <MdCall /> (028) 38 651 670 - (028) 38 647 256 (Ext: 5258, 5234)
-            </p>
-            <p>
-              <MdEmail /> ssps@hcmut.edu.vn
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="text-center fw-bold p-3" id="cp-write">
-        &copy; {new Date().getFullYear()} Copyright
-      </div>
-    </footer>
-  );
+    return (
+        <footer className="bg-dark pt-2 text-white">
+            <div className="container mt-4 px-3 px-md-0">
+                <div className="row mt-3 justify-content-around">
+                    <div className="col-3 col-md-4 col-lg-5 mb-3 text-center">
+                        <h6 className="text-uppercase fw-bold mb-3">
+                            HCMUT - SSPS
+                        </h6>
+                        <img
+                            src={logo_BK_border}
+                            alt="Logo Bách Khoa TPHCM"
+                            width={80}
+                            height={80}
+                            draggable="false"
+                            className="mx-auto d-block"
+                        />
+                    </div>
+                    <div className="col-3 col-md-4 col-lg-5 mb-md-0 mb-3">
+                        <h6 className="text-uppercase fw-bold mb-3">Liên hệ</h6>
+                        <p>
+                            <FaLocationDot /> 268 Lý Thường Kiệt, phường 14,
+                            quận 10, TP.HCM
+                        </p>
+                        <p>
+                            <MdCall /> (012) 34 567 89 - (012) 34 567 89 (Ext:
+                            1234, 1234)
+                        </p>
+                        <p>
+                            <MdEmail /> ssps@hcmut.edu.vn
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div className="text-center fw-bold p-3" id="cp-write">
+                &copy; {new Date().getFullYear()} Copyright
+            </div>
+        </footer>
+    );
 }
 
 export default Footer;
