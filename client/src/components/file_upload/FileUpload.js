@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ProgressiveImage from "react-progressive-graceful-image";
-import fileupload_bg from "../../assets/img/fileupload_bg.jpg";
+import fileupload_bg from "../../assets/img/fileupload_bg1.jpg";
 import "../../assets/styles/FileUpload.css";
 import FileCards from "./FileCard";
 import UploadArea from "./UploadArea";
@@ -11,7 +11,7 @@ function FileUpload({ id }) {
         height: "auto",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        minHeight: "80vh",
+        maxHeight: "80vh",
     };
 
     const [length, setLength] = useState(0);
@@ -83,7 +83,7 @@ function FileUpload({ id }) {
                                     <div className="card h-100 border-0 bg-light">
                                         <div className="d-flex flex-column card-body">
                                             <h5 className="card-title fw-bold mb-3">
-                                                Tài liệu đã tải
+                                                Tài liệu đã tải lên
                                             </h5>
                                             <div
                                                 className="d-flex flex-column justify-content-between overflow-auto"
