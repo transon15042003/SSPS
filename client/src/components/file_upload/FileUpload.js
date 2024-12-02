@@ -15,7 +15,7 @@ function FileUpload({ id }) {
     };
 
     const [length, setLength] = useState(0);
-    const [files, setFiles] = useState(["text.txt"]);
+    const [files, setFiles] = useState([]);
 
     useEffect(() => {
         const storedFiles = localStorage.getItem("files");

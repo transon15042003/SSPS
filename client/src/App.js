@@ -12,55 +12,67 @@ import CustomerRoutes from "./routes/CustomerRoutes";
 import SPSORoutes from "./routes/SPSORoutes";
 
 export default function App() {
-  const [user, setUser] = useState({
-    token: null,
-    isSPSO: false,
-    listFiles: [],
-  });
-  const [cookies] = useCookies();
+    const [user, setUser] = useState({
+        token: null,
+        isSPSO: false,
+        listFiles: [],
+    });
+    const [cookies] = useCookies();
 
-  useEffect(() => {
-    const userCredentials = JSON.parse(localStorage.getItem("userCredentials"));
+    useEffect(() => {
+        const userCredentials = JSON.parse(
+            localStorage.getItem("userCredentials")
+        );
 
-    if (userCredentials === null || userCredentials === undefined) {
-      setUser({ token: null, isSPSO: false, listFiles: [] });
-    } else {
-      setUser({ ...user, ...userCredentials });
-    }
-  }, [cookies, user]);
+        if (userCredentials === null || userCredentials === undefined) {
+            setUser({ token: null, isSPSO: false, listFiles: [] });
+        } else {
+            setUser({ ...user, ...userCredentials });
+        }
+    }, [cookies]);
 
-  return (
-    <UserContext.Provider value={{ user, setUser }}>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/">
-            <Route index element={<Home />} />
-            <Route path="login">
-              <Route index element={<Login />} />
-              <Route path="customer" element={<Login role="customer" />} />
-              <Route path="spso" element={<Login role="spso" />} />
-            </Route>
-            <Route
-              path="profile"
-              element={
-                <ProtectedRoute>
-                  <Profile />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/*"
-              element={
-                <ProtectedRoute requireSPSO={user.isSPSO}>
-                  {user.isSPSO ? <SPSORoutes /> : <CustomerRoutes />}
-                </ProtectedRoute>
-              }
-            />
-          </Route>
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </UserContext.Provider>
-  );
+    return (
+        <UserContext.Provider value={{ user, setUser }}>
+            <BrowserRouter>
+                <Header />
+                <Routes>
+                    <Route path="/">
+                        <Route index element={<Home />} />
+                        <Route path="login">
+                            <Route index element={<Login />} />
+                            <Route
+                                path="customer"
+                                element={<Login role="customer" />}
+                            />
+                            <Route
+                                path="spso"
+                                element={<Login role="spso" />}
+                            />
+                        </Route>
+                        <Route
+                            path="profile"
+                            element={
+                                <ProtectedRoute>
+                                    <Profile />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route
+                            path="/*"
+                            element={
+                                <ProtectedRoute requireSPSO={user.isSPSO}>
+                                    {user.isSPSO ? (
+                                        <SPSORoutes />
+                                    ) : (
+                                        <CustomerRoutes />
+                                    )}
+                                </ProtectedRoute>
+                            }
+                        />
+                    </Route>
+                </Routes>
+                <Footer />
+            </BrowserRouter>
+        </UserContext.Provider>
+    );
 }
