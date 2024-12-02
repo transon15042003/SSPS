@@ -23,7 +23,7 @@ function Footer() {
         <footer className="bg-dark pt-2 text-white">
             <div className="container mt-4 px-3 px-md-0">
                 <div className="row mt-3 justify-content-around">
-                    <div className="col-3 col-md-4 col-lg-5 mb-3 text-center">
+                    <div className="col-12 col-md-4 col-lg-5 mb-3 text-center mb-5 mb-md-0">
                         <h6 className="text-uppercase fw-bold mb-3">
                             HCMUT - SSPS
                         </h6>
@@ -36,7 +36,7 @@ function Footer() {
                             className="mx-auto d-block"
                         />
                     </div>
-                    <div className="col-3 col-md-4 col-lg-5 mb-md-0 mb-3">
+                    <div className="col-12 col-md-4 col-lg-5 mb-md-0 mb-3">
                         <h6 className="text-uppercase fw-bold mb-3">Liên hệ</h6>
                         <p>
                             <FaLocationDot /> 268 Lý Thường Kiệt, phường 14,

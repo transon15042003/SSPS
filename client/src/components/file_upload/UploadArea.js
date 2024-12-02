@@ -1,5 +1,5 @@
 import ProgressiveImage from "react-progressive-graceful-image";
-import upload_button from "../../assets/img/upload_button.png";
+import upload_button from "../../assets/img/upload.png";
 
 function UploadArea({ setLength }) {
     const uploadFiles = (files) => {
@@ -63,7 +63,8 @@ function UploadArea({ setLength }) {
                                 backgroundPosition: "center",
                                 backgroundSize: "contain",
                                 backgroundRepeat: "no-repeat",
-                                width: "100%",
+                                width: "50%",
+                                margin: "0 auto",
                             }}
                         >
                             <img
