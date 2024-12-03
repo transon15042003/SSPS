@@ -21,7 +21,7 @@ function Home() {
       className="position-relative"
       style={{
         width: "100%",
-        minHeight: "80vh",
+        minHeight: "90vh",
         background: `url(${homeBG})`,
         backgroundSize: "cover",
         backgroundPosition: "right",

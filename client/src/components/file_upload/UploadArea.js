@@ -63,7 +63,7 @@ function UploadArea({ setLength }) {
                 backgroundPosition: "center",
                 backgroundSize: "contain",
                 backgroundRepeat: "no-repeat",
-                width: "50%",
+                width: "25%",
                 margin: "0 auto",
               }}
             >
@@ -93,7 +93,7 @@ function UploadArea({ setLength }) {
           onChange={handleFileUpload}
         />
         <button
-          className="btn text-white fw-medium"
+          className="btn text-white fw-medium mb-2 mb-md-4"
           id="button"
           onClick={() => document.getElementById("fileInput").click()}
         >

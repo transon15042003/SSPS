@@ -66,7 +66,7 @@ function PrintHistory() {
   }
 
   return (
-    <div className="container-md mt-3">
+    <div className="container-md mt-3" style={{ minHeight: "90vh" }}>
       <div className="row justify-content-center">
         <h1 className="col-12 text-center">Lịch sử in</h1>
         {historyElement}

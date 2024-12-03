@@ -8,10 +8,8 @@ import UploadArea from "./UploadArea";
 function FileUpload({ id }) {
   const bg = {
     backgroundImage: `url(${fileupload_bg})`,
-    height: "auto",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    maxHeight: "80vh",
   };
 
   const [length, setLength] = useState(0);
@@ -27,7 +25,7 @@ function FileUpload({ id }) {
 
   return (
     <div
-      className="position-relative mx-auto shadow-lg min-vh-100"
+      className="position-relative mx-auto shadow-lg"
       style={bg}
       id="file-upload"
     >
@@ -38,8 +36,7 @@ function FileUpload({ id }) {
             src={src}
             alt="File Upload Background"
             style={{
-              width: "100%",
-              height: "100%",
+              width: "70%",
               objectFit: "cover",
               visibility: "hidden",
             }}
@@ -48,34 +45,32 @@ function FileUpload({ id }) {
         )}
       </ProgressiveImage>
       <div
-        className="container-fluid position-absolute top-50 start-50 translate-middle rounded-4 shadow-lg"
+        className="container-fluid position-absolute top-50 start-50 translate-middle rounded-4 shadow-lg p-4 p-lg-5"
         style={{
           backgroundColor: "rgba(255, 255, 255, 0.9)",
           width: "85%",
-          height: "85%",
-          padding: "2rem",
         }}
       >
-        <div className="row h-100">
+        <div className="row h-100 align-items-center ">
           <div className="col-12">
-            <div className="d-flex justify-content-center align-items-center mb-4">
+            <div className="d-flex justify-content-center align-items-center">
               <div className="text-center">
-                <h2 className="display-6 fw-bold mb-2">Tải tài liệu</h2>
-                <p className="text-muted fs-5">Tải tài liệu bạn muốn in</p>
+                <h2 className="display-6 fw-bold mb-4">Tải lên tài liệu</h2>
+                {/* <p className="text-muted fs-5">Tải tài liệu bạn muốn in</p> */}
               </div>
             </div>
 
-            <div className="row h-75">
+            <div className="row">
               <div
                 className={`${
-                  files.length === 0 ? "col-12" : "col-7"
+                  files.length === 0 ? "col-12" : "col-6"
                 } h-100 d-flex align-items-center justify-content-center`}
               >
                 <UploadArea setLength={setLength} />
               </div>
 
               {files.length !== 0 && (
-                <div className="col-5 h-100">
+                <div className="col-6 h-100">
                   <div className="card h-100 border-0 bg-light">
                     <div className="d-flex flex-column card-body">
                       <h5 className="card-title fw-bold mb-3">
