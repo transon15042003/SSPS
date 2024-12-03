@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import { Link, NavLink } from "react-router-dom";
-import sampleAvt from "../../assets/img/standard_avt.jpg";
+import sampleAvt from "../../assets/img/default_avatar.jpg";
 import "../../assets/styles/header.css";
 import { UserContext } from "../../context/UserContext";
 import { customerLinks, profileLinks, spsoLinks } from "./page_links";
@@ -80,7 +80,7 @@ function DropdownAvatar({ handleLogout }) {
   return (
     <div className="dropdown order-lg-last mx-lg-3">
       <button
-        className="btn dropdown-toggle"
+        className="btn dropdown-toggle d-flex align-items-center"
         type="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
