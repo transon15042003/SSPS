@@ -71,7 +71,7 @@ function PrintReportDetail() {
     );
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" style={{ minHeight: "90vh" }}>
       <div
         className="row justify-content-center m-3 rounded-4"
         style={{

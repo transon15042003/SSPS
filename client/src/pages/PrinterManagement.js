@@ -43,14 +43,14 @@ export default function PrinterManagement() {
 
   if (loading) {
     return (
-      <div className="col-12 my-3 text-center">
+      <div className="col-12 my-3 text-center" style={{ minHeight: "90vh" }}>
         <h3>Dữ liệu đang tải, vui lòng chờ</h3>
         <Loading />
       </div>
     );
   }
   return (
-    <div>
+    <div style={{ minHeight: "90vh", marginTop: "2rem" }}>
       <Searchbar />
       <PrinterList />
     </div>

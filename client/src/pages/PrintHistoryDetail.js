@@ -71,7 +71,7 @@ function PrintOrderHistory() {
   }
 
   return (
-    <div className="container my-3">
+    <div className="container my-3" style={{ minHeight: "90vh" }}>
       <div className="row justify-content-center">
         <div className="col-md-10 col-lg-8">{detailElement}</div>
       </div>

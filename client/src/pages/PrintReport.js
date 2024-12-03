@@ -160,7 +160,7 @@ function PrintReport() {
   }
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" style={{ minHeight: "90vh" }}>
       <div className="row justify-content-center p-4">
         <h1 className="col-12 text-center pb-3">Báo cáo hệ thống</h1>
         <div className="col-12 text-bold mx-1">
