@@ -24,7 +24,7 @@ function StatusTag({ status }) {
 
   return (
     <span
-      className={`badge rounded-pill text-bg-${bgColor}`}
+      className={`p-2 badge rounded-pill text-bg-${bgColor}`}
       style={{
         fontSize: "0.88rem",
       }}

@@ -102,9 +102,9 @@ function ConfigArea({ num_pages, set_pages_state, support_function }) {
 
   return (
     <>
-      <div className="row p-2">
+      {/* <div className="row p-2">
         <div className="col-8 fw-bold fs-5">Thiết lập cấu hình in</div>
-      </div>
+      </div> */}
       <div className="row p-2">
         <div className="col">Cơ sở</div>
         <select
@@ -144,7 +144,7 @@ function ConfigArea({ num_pages, set_pages_state, support_function }) {
           ))}
         </select>
       </div>
-      <div className="row p-2">
+      <div className="d-none row p-2">
         <div className="col">Phòng</div>
         <input
           className="col form-control"

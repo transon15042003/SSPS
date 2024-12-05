@@ -1,18 +1,15 @@
 export const spsoLinks = [
-  { name: "Trang chủ", to: "/" },
-  { name: "Quản lý máy in", to: "/printer" },
-  // { name: 'Cấu hình hệ thống', to: '/config'},
-  { name: "Lịch sử dịch vụ", to: "/printlog" },
-  { name: "Xem báo cáo", to: "/report" },
-  // { name: 'Hỗ trợ người dùng', to: '/support'}
+    { name: "Trang chủ", to: "/" },
+    { name: "Quản lý máy in", to: "/printer" },
+    { name: "Lịch sử dịch vụ", to: "/printlog" },
+    { name: "Xem báo cáo", to: "/report" },
 ];
 
 export const customerLinks = [
-  { name: "Trang chủ", to: "/" },
-  { name: "In tài liệu", to: "/print" },
-  { name: "Lịch sử in", to: "/print/log" },
-  { name: "Mua trang in", to: "/buy" },
-  // { name: 'Hỗ trợ', to: '/support'}
+    { name: "Trang chủ", to: "/" },
+    { name: "In tài liệu", to: "/print" },
+    { name: "Lịch sử in", to: "/print/log" },
+    { name: "Mua trang in", to: "/buy" },
 ];
 
 export const profileLinks = [{ name: "Thông tin cá nhân", to: "/profile" }];
