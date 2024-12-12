@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { BsFiletypePptx } from "react-icons/bs";
 import { FaRegFile, FaRegFilePdf } from "react-icons/fa6";
-import { IoDocumentTextOutline, IoPrintOutline } from "react-icons/io5";
+import {
+    IoDocumentTextOutline,
+    IoPrintOutline,
+    IoTrashOutline,
+} from "react-icons/io5";
 import { Link } from "react-router-dom";
 import Paging from "./Paging";
 
-function FileCards({ files, items_per_page = 3 }) {
+function FileCards({ files, setFiles, items_per_page = 3 }) {
     const [currentPage, setCurrentPage] = useState(1);
 
     const indexOfLastItem = currentPage * items_per_page;
@@ -50,6 +54,12 @@ function FileCards({ files, items_per_page = 3 }) {
         }
     };
 
+    const handleDelete = (fileToDelete) => {
+        const updatedFiles = files.filter((file) => file !== fileToDelete);
+        localStorage.setItem("files", JSON.stringify(updatedFiles));
+        setFiles(updatedFiles);
+    };
+
     return (
         <>
             <ul className="list-group rounded-0">
@@ -58,7 +68,7 @@ function FileCards({ files, items_per_page = 3 }) {
                         <div className="d-flex row">
                             <div className="col-1">{handleFileIcon(file)}</div>
                             <div
-                                className="col-6 col-sm-8 col-md-9 col-lg-10 text-3 py-1"
+                                className="col-6 col-sm-7 col-md-8 col-lg-9 text-3 py-1"
                                 style={{
                                     overflowWrap: "break-word",
                                     whiteSpace: "pre-wrap",
@@ -77,6 +87,13 @@ function FileCards({ files, items_per_page = 3 }) {
                             >
                                 <IoPrintOutline style={style} />
                             </Link>
+                            <button
+                                className="col-1 btn btn-danger p-0"
+                                onClick={() => handleDelete(file)}
+                                style={{ height: "24px", width: "24px" }}
+                            >
+                                <IoTrashOutline style={style} />
+                            </button>
                         </div>
                         <div
                             className="progress bg-dark mt-2"

@@ -125,8 +125,8 @@ function PrintConfig() {
                 >
                     Thiết lập trang in
                 </div>
-                <div className="row p-3">
-                    <div className="col-12 col-md-6">
+                <div className="row p-3 justify-content-center">
+                    {/* <div className="col-12 col-md-6 border-end border-secondary-subtle">
                         <div className="row">
                             <div className="col-8 fw-bold fs-5">
                                 Xem trước khi in
@@ -135,8 +135,8 @@ function PrintConfig() {
                         <div id="document-preview">
                             <FilePreview docs={docs} />
                         </div>
-                    </div>
-                    <div className="col-12 col-md-6 border-start border-secondary-subtle">
+                    </div> */}
+                    <div className="col-10">
                         <ConfigArea
                             num_pages={no_pages_of_files}
                             set_pages_state={setPagesState}
