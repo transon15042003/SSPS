@@ -101,7 +101,7 @@ VALUES
 (1111111, 'Mai Đức T', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', 'lecturer', 't.mai@hcmut.edu.vn', 100, '2024-11-29 17:55:00'),
 (2222222, 'Bùi Công T', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', 'lecturer', 't.bui@hcmut.edu.vn', 100, '2024-11-29 14:19:03'),
 (3333333, 'Tran Hoang S', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', 'lecturer', 'son.tran@hcmut.edu.vn', 100, '2024-11-29 14:17:15'),
-(2112111, 'Nguyen Anh L', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', 'student', 'john.doe@hcmut.edu.vn', 50, '2024-11-19 10:21:17'),
+(2112111, 'Nguyen Anh L', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', 'student', 'linh.anh@hcmut.edu.vn', 50, '2024-11-19 10:21:17'),
 (2112222, 'Lê Văn A', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', 'student', 'a.le@hcmut.edu.vn', 70, '2024-11-19 10:23:40'),
 (2112333, 'Trần Đức B', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', 'student', 'b.tran@hcmut.edu.vn', 60, '2024-11-19 10:23:40'),
 (2112444, 'Hoang Hong N', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', 'student', 'nam.hoang@hcmut.edu.vn', 100, '2024-11-29 18:49:21');
@@ -110,7 +110,7 @@ VALUES
 INSERT INTO spso (spso_id, name, username, password, dob, email, phone, last_used)
 VALUES
 (1, 'Tran Hoang S', 'admints', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', '2003-01-01', 'son.tran@hcmut.edu.vn', 123456789, '2024-11-29 18:47:31'),
-(2, 'Nguyen Anh L', 'adminal', '$2a$10$EFDuMAwdOEcnkU2mV7HBi.7cDB124e4MmrX4jROcqoPrPU2OmFjpK', '2003-01-01', 'linh.anh@hcmut.edu.vn', 123456789, '2024-11-26 00:00:00');
+(2, 'Nguyen Anh L', 'adminal', '$2a$10$uOVcPL2PxzrVRO6Bz7NrdOGLQAuIXVaWHV7u8sbueJ2xnfs7ayWdi', '2003-01-01', 'linh.anh@hcmut.edu.vn', 123456789, '2024-11-26 00:00:00');
 
 -- Insert data for the printer table
 INSERT INTO printer (printer_id, name, brand, model, description, loc_campus, loc_building, loc_room, status)
