@@ -76,12 +76,12 @@ The application should be starting. The ReactJS application will run on [http://
 
 To log in as a student:
 
--   Email: `john.doe@hcmut.edu.vn`
+-   Email: `son.tran@hcmut.edu.vn`
 -   Password: `2114672`
 
 To log in as an admin:
 
--   Username: `admints`
+-   Username: `admin_transon`
 -   Password: `2114672`
 
 You are now ready to explore our application!
